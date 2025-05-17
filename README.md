@@ -46,16 +46,24 @@ lead_time_quartiles: Quartiles of lead time from when the booking was made until
 
 ## Machine Learning
 
-A standard random forest, logistic regression, and xgboost was used to investigate the most important variables related to hotel bookiongs. The accuracy for each of the models are as follows: 85.5% ,81.4%, and 84.7% for each of the random forest, logistic regression and xgboost models.
+A standard random forest, logistic regression, and xgboost was used to investigate the most important variables related to hotel bookiongs.
 
 From the random forest the 5 most important variables found are the average daily rarte, the non refundable deposit type, the total amount of special requests, the length of stay, and the previous cancellations.
 
-
 From the stepwise regression model, the most important variables related to hotel cancellations is the non refundable deposit type, high lead times (Q2 - Q4) and the total amount of special requests. Of these the non refundable deposit type, and high lead times positively affect the log odds of cancellation. The total amount of special requests negatively affect the log odds of cancellations.
+
+The accuracy for each of the models are as follows: 85.5% ,81.4%, and 84.7% for each of the random forest, logistic regression and xgboost models. As a result, as the interprability of the logistic regression model is much simpler, we presented the findings of the model in more depth. 
+
+## Logistic Regression In Depth
+
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/92250e7b-cabc-4f1c-9d4b-ea175866a705" />  
+
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/aa0716c9-c772-4685-89f6-05a5ce60f7a5" />
+The above is the top 10 largest coefficients with the largest magnitude in terms of the statistically significant features. It is observed that the non-refundable deposit type is the most important with a positive value indicating that it causes individiduals to cancel their bookings.  
 
 ## Data Visualization
 
-To investigate the trends found from the machine learning models we used model free plots to visualize the findings. 
+To futher verify our findings we investigated the trends found from the machine learning models using model free plots to visualize the findings. 
 
 ![image](https://github.com/user-attachments/assets/3dae67a8-5bb3-4eb3-9462-7d0c91b7e7e4)
 
@@ -64,6 +72,7 @@ Looking at the commonly found important feature of non refundable deposit type f
 ![image](https://github.com/user-attachments/assets/5b643b3c-4fa5-41e6-a1cc-e8c183a7ab4c)
 
 Looking at the lead time quartiles, it is observed that initially at low lead times (Q1) the amount of not cancelled to cancelled is high. As the amount of lead time increases, the amount of cancelled to not cancelled incraeses until in Q4 where the amount of not cancelled gets surpassed by those who do cancel.
+
 
 ## Conclusion
 
